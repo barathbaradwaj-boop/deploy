@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FashionKart - E-Commerce</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body onload="showUserProfile()">
+    <header>
+        <div class="logo">FashionKart</div>
+        <nav>
+            <a href="#products">Products</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <div id="profile-area" class="auth-buttons">
+            <a href="register.html" class="btn">Sign Up</a>
+            <a href="login.html" class="btn">Sign In</a>
+        </div>
+    </header>
+
+    <section class="hero">
+        <h1>Welcome to FashionKart</h1>
+        <p>Trendy Clothes. Affordable Prices. Fast Delivery.</p>
+    </section>
+
+    <section id="products">
+        <h2>Products</h2>
+        <div class="product-list">
+
+            <div class="product">
+                <img src="assests/image/t-shirt.jpg" alt="T-Shirt">
+                <h3>Classic T-Shirt</h3>
+                <p>₹499</p>
+                <button onclick="addToCart('Classic T-Shirt')">Add to Cart</button>
+            </div>
+
+            <div class="product">
+                <img src="assests/image/Winter-Hoodie.jpg" alt="Hoodie">
+                <h3>Winter Hoodie</h3>
+                <p>₹999</p>
+                <button onclick="addToCart('Winter Hoodie')">Add to Cart</button>
+            </div>
+
+            <div class="product">
+                <img src="assests/image/Blue-Denim-Jeans.jpg" alt="Jeans">
+                <h3>Blue Denim Jeans</h3>
+                <p>₹799</p>
+                <button onclick="addToCart('Blue Denim Jeans')">Add to Cart</button>
+            </div>
+
+            <div class="product">
+                <img src="assests/image/Casual-Jacket.jpg" alt="Jacket">
+                <h3>Casual Jacket</h3>
+                <p>₹1299</p>
+                <button onclick="addToCart('Casual Jacket')">Add to Cart</button>
+            </div>
+
+            <div class="product">
+                <img src="assests/image/White-Sneakers.jpg" alt="Sneakers">
+                <h3>White Sneakers</h3>
+                <p>₹1499</p>
+                <button onclick="addToCart('White Sneakers')">Add to Cart</button>
+            </div>
+
+            <div class="product">
+                <img src="assests/image/Canvas-Backpack.jpg" alt="Backpack">
+                <h3>Canvas Backpack</h3>
+                <p>₹899</p>
+                <button onclick="addToCart('Canvas Backpack')">Add to Cart</button>
+            </div>
+
+            <div class="product">
+                <img src="assests/image/Street-Style-Cap.jpg" alt="Cap">
+                <h3>Street Style Cap</h3>
+                <p>₹299</p>
+                <button onclick="addToCart('Street Style Cap')">Add to Cart</button>
+            </div>
+
+            <div class="product">
+                <img src="assests/image/Smart-Casual-Watch.jpg" alt="Watch">
+                <h3>Smart Casual Watch</h3>
+                <p>₹1999</p>
+                <button onclick="addToCart('Smart Casual Watch')">Add to Cart</button>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>About Us</h2>
+        <p>
+            FashionKart is your one-stop online destination for the latest and trendiest clothing and accessories.
+            We are passionate about fashion, quality, and affordability. Our mission is to bring high-style products to
+            your doorstep with just a few clicks.
+        </p>
+        <p>
+            Whether you are looking for everyday casuals, seasonal essentials, or statement pieces, FashionKart has something
+            for everyone. We believe in making fashion accessible, fun, and inspiring.
+        </p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form onsubmit="return validateContactForm()" id="contactForm">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <textarea id="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 FashionKart. All rights reserved.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
