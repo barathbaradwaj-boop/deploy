@@ -1,16 +1,17 @@
-import mongoose from 'mongoose';
-import dotenv from 'dotenv';
-
+import mongoose from "mongoose";
+import dotenv from "dotenv";
 dotenv.config();
 
 const connectDB = async () => {
   try {
-    await mongoose.connect(process.env.MONGO_URI);
-    console.log("✅ MongoDB Connected");
+    await mongoose.connect(process.env.DB_URL, {
+      dbName: "fashionkart"
+    });
+    console.log("✅ MongoDB Connected...");
   } catch (err) {
-    console.error("❌ MongoDB Error:", err.message);
+    console.error("❌ DB Connection Error:", err);
     process.exit(1);
   }
 };
 
-connectDB();
+export default connectDB;
